@@ -8,6 +8,7 @@ echo "🚀 Starting installation of Docker, Kind, and kubectl..."
 # ----------------------------
 # 1. Install Docker
 # ----------------------------
+
 if ! command -v docker &>/dev/null; then
   echo "📦 Installing Docker..."
   sudo apt-get update -y
@@ -24,6 +25,7 @@ fi
 # ----------------------------
 # 2. Install Kind (based on architecture)
 # ----------------------------
+
 if ! command -v kind &>/dev/null; then
   echo "📦 Installing Kind..."
 
@@ -47,6 +49,7 @@ fi
 # ----------------------------
 # 3. Install kubectl (based on architecture)
 # ----------------------------
+
 if ! command -v kubectl &>/dev/null; then
   echo "📦 Installing kubectl (latest stable version)..."
 
@@ -72,6 +75,7 @@ fi
 # ----------------------------
 # 4. Confirm Versions
 # ----------------------------
+
 echo
 echo "🔍 Installed Versions:"
 docker --version
