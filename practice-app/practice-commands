@@ -1,0 +1,142 @@
+1  clear
+    2  ls
+    3  git clone https://github.com/Siddhesh-07/k8s-labs.git
+    4  ls
+    5  cd k8s-labs
+    6  ls
+    7  ./script/sh
+    8  ./script.sh
+    9  ls
+   10  kind create cluster --config config.yml --name sid-cluster
+   11  sudo usermod -aG docker $USER
+   12  newgrp docker
+   13  docker ps
+   14  kubectl cluster-info --context kind-sid-cluster
+   15  kubectl get pods
+   16  kubectl get ns
+   17  ls
+   18  cd nginx
+   19  ls
+   20  kubectl apply -f namespace.yml
+   21  kubectl apply -f deployment.yml
+   22  kubectl get pods
+   23  kubectl get pods -n nginx
+   24  kubectl scale --replicas=1 deployment/deploy -n nginx
+   25  kubectl get pods -n nginx
+   26  clear
+   27  ls
+   28  vim pv.yml
+   29  kubectl get pv
+   30  vim pv.yml
+   31  kubectl apply -f pv.yml
+   32  kubectl get pv -n nginx
+   33  vim pvc.yml
+   34  vim pv.yml
+   35  vim pvc.yml
+   36  kubectl get pv -n nginx
+   37  kubectl apply -f pvc.yml
+   38  kubectl get pv -n nginx
+   39  kubectl get pods
+   40  kubectl get pods -n nginx
+   41  kubectl get pods -n nginx -o wide
+   42  docker ps
+   43  clear
+   44  ls
+   45  kubectl get deployment -n nginx
+   46  kubectl delete -f deloyment.yml
+   47  ls
+   48  kubectl delete -f deployment.yml
+   49  vim deployment.yml
+   50  kubectl -f apply deployment.yml
+   51  kubectl apply -f deployment.yml
+   52  kubectl get pods -n nginx
+   53  kubectl get pods -n nginx -o wide
+   54  docker ps
+   55  docker ecec -it eab65f4a0e87 bash
+   56  docker exec -it eab65f4a0e87 bash
+   57  clear
+   58  ls
+   59  vim service.yml
+   60  kubectl apply -f service.py
+   61  kubectl apply -f service.yml
+   62  kubectl get all
+   63  kubectl get all -n nginx
+   64  kubectl port-forward service/ser -n nginx 80:80 --address=0.0.0.0
+   65  sudo -E kubectl port-forward service/ser -n nginx 80:80 --address=0.0.0.0
+   66  sudo kubectl port-forward service/ser -n nginx 80:80 --address=0.0.0.0 --kubeconfig=$HOME/.kube/config
+   67  sudo -E kubectl port-forward service/ser -n nginx 81:80 --address=0.0.0.0
+   68  sudo kubectl port-forward service/ser -n nginx 81:80 --address=0.0.0.0 --kubeconfig=$HOME/.kube/config
+   69  ls
+   70  clear
+   71  ls
+   72  cd django-notes-app
+   73  ls
+   74  cd k8s
+   75  cd /
+   76  ls
+   77  cd home
+   78  ls
+   79  cd ununtu
+   80  cd ubuntu
+   81  ls
+   82  cd k8s-labs
+   83  ls
+   84  cd nginx
+   85  ls
+   86  cat pv.yml
+   87  cat pvc.yml
+   88  cat service.yml
+   89  cat deployment.yml
+   90  vim service.yml
+   91  cd ..
+   92  ls
+   93  cd django-notes-app
+   94  ls
+   95  cd k8s
+   96  ls
+   97  vim service.yml
+   98  vim ser.yml
+   99  ls
+  100  vim service-app.yml
+  101  kubectl get ns
+  102  ls
+  103  cat namespace.yml
+  104  vim service-app.yml
+  105  kubectl apply -f namespace.yml
+  106  kubectl apply -f deployment.yml
+  107  kubectl apply -f service.yml
+  108  kubectl get all -n app
+  109  cat service.yml
+  110  ls
+  111  cat service-app.yml
+  112  kubectl port-forward service/app-service -n app 8000:8000 --address=0.0.0.0
+  113  kubectl apply -f service-app.yml
+  114  vim service-app.yml
+  115  kubectl apply -f service-app.yml
+  116  kubectl get all -n app
+  117  kubectl port-forward service/app-service -n app 8000:8000 --address=0.0.0.0
+  118  kubectl port-forward service/service-app -n app 8000:8000 --address=0.0.0.0
+  119  kubectl get pods -n app
+  120  kubectl get pods -n app --show-labels
+  121  cat deployment.yml
+  122  vim deployment.yml
+  123  kubectl get deployments -n app
+  124  kubectl delete deployment/app-deploy -n app
+  125  kubectl apply -f deployment.yml
+  126  kubectl get pods -n app
+  127  kubectl get pods -n app --show-labels
+  128  kubectl port-forward service/service-app -n app 8000:8000 --address=0.0.0.0
+  129  kubectl get endpoints service-app -n app
+  130  kubectl get svc service-app -n app -o jsonpath='{.spec.selector}'
+  131  vim dployment.yml
+  132  vim deployment.yml
+  133  kubectl delete deployment/app-deploy -n app
+  134  kubectl apply -f deployment.yml
+  135  kubectl get svc service-app -n app -o jsonpath='{.spec.selector}'
+  136  kubectl get endpoints service-app -n app
+  137  kubectl port-forward service/service-app -n app 8000:8000 --address=0.0.0.0 &
+  138  ls
+  139  cat deployment.yml
+  140  cat service-app.yml
+  141  cat namespace.yml
+  142  history
