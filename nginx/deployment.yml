@@ -7,20 +7,27 @@ metadata:
     app: nginx
 
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: nginx
 
   template:
     metadata:
-      name: pod 
-      labels: 
+      name: pod
+      labels:
         app: nginx
 
     spec:
-      containers: 
+      containers:
         - name: nginx
           image: nginx:latest
           ports:
             - containerPort: 80
+          volumeMounts:
+            - mountPath: /var/www/html
+              name: vol1
+      volumes:
+        - name: vol1
+          persistentVolumeClaim:
+            claimName: local-pvc
