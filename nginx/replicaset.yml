@@ -1,4 +1,4 @@
-kind: ReplicaSet j.    # keeps desired replica pods count consistently.
+kind: ReplicaSet    # keeps desired replica pods count consistently.
 apiVersion: apps/v1
 metadata:
   name: replica
