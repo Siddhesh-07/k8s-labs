@@ -1,4 +1,4 @@
-kind: Deployment
+kind: Deployment h.  #can scale replicas and also has rolling update.
 apiVersion: apps/v1
 metadata:
   name: deploy
