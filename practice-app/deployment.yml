@@ -20,3 +20,7 @@ spec:
         image: elcapitansid/app
         ports:
         - containerPort: 8000
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 8000
