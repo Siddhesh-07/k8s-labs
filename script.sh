@@ -84,6 +84,3 @@ kubectl version --client --output=yaml
 
 echo
 echo "🎉 Docker, Kind, and kubectl installation complete!"
-
-sudo usermod -aG docker $USER
-newgrp docker
