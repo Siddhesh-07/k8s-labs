@@ -9,15 +9,15 @@ spec:
       app: mongodb
   replicas: 1
   template:
-    name: mongodb-pod
-    namespace: chat-app
     metadata:
+      name: mongodb-pod
+      namespace: chat-app
       labels:
         app: mongodb
     spec:
       containers:
       - name: mongodb
-        image: mongo:latest
+        image: mongo:4.4  #faced error with latest image
         ports:
         - containerPort: 27017
         env:
