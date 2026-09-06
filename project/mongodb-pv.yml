@@ -10,7 +10,4 @@ spec:
     - ReadWriteOnce
   hostpath:
     path: /data
-
-
-
-
+    
